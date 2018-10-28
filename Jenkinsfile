@@ -20,4 +20,7 @@ pipeline {
       }
     }
   }
+  environment {
+    LD_LIBRARY_PATH = "/opt/oracle/instantclient_18_3"
+  }
 }
