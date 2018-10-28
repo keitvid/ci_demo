@@ -11,6 +11,7 @@ pipeline {
     stage('Run DAGs') {
       steps {
         sh 'echo $WORKSPACE'
+        sh 'airflow trigger_dag dump_employees'
       }
     }
     stage('Test \'employees\' db') {
