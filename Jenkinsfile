@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Test \'employees\' db') {
       steps {
-        sh 'python3 ./tests/test_empoyees.py'
+        sh 'python3 ./tests/test_employees.py'
       }
     }
     stage('Deploy') {
