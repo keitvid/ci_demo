@@ -1,9 +1,20 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
+    stage('prepare_environment') {
       steps {
         echo 'build start'
+        sh 'echo hello'
+      }
+    }
+    stage('build') {
+      steps {
+        sh 'echo build'
+      }
+    }
+    stage('test') {
+      steps {
+        sh 'echo test'
       }
     }
   }
