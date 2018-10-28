@@ -18,7 +18,10 @@ pipeline {
         sh 'echo test'
       }
     }
-    stage('') {
+    stage('deploy') {
+      when {
+        tag 'release-*'
+      }
       steps {
         sh 'echo deployed'
       }
