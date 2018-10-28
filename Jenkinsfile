@@ -4,7 +4,7 @@ pipeline {
     stage('prepare_environment') {
       steps {
         echo 'build start'
-        sh 'echo $PATH'
+        sh 'pip3 install -r ./test_environment/requirements.txt'
         sh 'python3 ./test_environment/create_data_sample.py'
       }
     }
