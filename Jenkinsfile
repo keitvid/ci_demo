@@ -9,6 +9,9 @@ pipeline {
       }
     }
     stage('Run DAGs') {
+      environment {
+        PATH = '"$PATH:/home/kirill/.local/bin/airflow"'
+      }
       steps {
         sh 'echo $WORKSPACE'
         sh 'airflow trigger_dag dump_employees'
