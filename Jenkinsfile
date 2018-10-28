@@ -1,24 +1,24 @@
 pipeline {
   agent any
   stages {
-    stage('prepare_environment') {
+    stage('Setup Oracle') {
       steps {
         echo 'build start'
         sh 'pip3 install -r ./test_environment/requirements.txt'
         sh 'python3 ./test_environment/create_data_sample.py'
       }
     }
-    stage('build') {
+    stage('Run DAGs') {
       steps {
         sh 'echo $WORKSPACE'
       }
     }
-    stage('test') {
+    stage('Test \'employees\' db') {
       steps {
-        sh 'echo test'
+        sh 'python3 ./tests/test_empoyees.py'
       }
     }
-    stage('deploy') {
+    stage('Deploy') {
       when {
         tag 'release-*'
       }
