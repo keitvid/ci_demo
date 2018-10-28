@@ -18,6 +18,11 @@ pipeline {
         sh 'echo test'
       }
     }
+    stage('') {
+      steps {
+        sh 'echo deployed'
+      }
+    }
   }
   environment {
     LD_LIBRARY_PATH = '/opt/oracle/instantclient_18_3'
