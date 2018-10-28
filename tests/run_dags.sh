@@ -1,0 +1,1 @@
+cat jenkins | sudo su -kirill -sh "airflow trigger_dag example_skip_dag"
