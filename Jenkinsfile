@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Run DAGs') {
       steps {
-        sh './tests/run_dags.sh'
+        sh 'airflow trigger_dag  dump_employees'
       }
     }
     stage('Test \'employees\' db') {
