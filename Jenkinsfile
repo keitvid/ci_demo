@@ -29,5 +29,6 @@ pipeline {
   }
   environment {
     LD_LIBRARY_PATH = '/opt/oracle/instantclient_18_3'
+    PATH = '/home/kirill/bin:/home/kirill/.local/bin:/home/kirill/bin:/home/kirill/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
   }
 }
