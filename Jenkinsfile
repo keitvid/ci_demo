@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'build start'
         sh 'python3 ./test_environment/create_data_sample.py'
+        sh '$PATH'
       }
     }
     stage('build') {
