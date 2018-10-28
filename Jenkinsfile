@@ -28,7 +28,6 @@ pipeline {
     }
   }
   environment {
-    PATH = 'PATH+EXTRA/home/kirill/.local/bin/airflow'
     LD_LIBRARY_PATH = '/opt/oracle/instantclient_18_3'
   }
 }
