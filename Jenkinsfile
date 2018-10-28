@@ -10,7 +10,7 @@ pipeline {
     }
     stage('Run DAGs') {
       steps {
-        sh 'cat jenkins | sudo su -kirill -sh "airflow trigger_dag example_skip_dag"'
+        sh './tests/run_dags.sh'
       }
     }
     stage('Test \'employees\' db') {
