@@ -4,7 +4,7 @@ pipeline {
     stage('prepare_environment') {
       steps {
         echo 'build start'
-        sh 'echo hello'
+        sh 'python3 ./test_environment/create_data_sample.py'
       }
     }
     stage('build') {
