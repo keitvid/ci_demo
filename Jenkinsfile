@@ -9,7 +9,7 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'echo build'
+        sh 'echo $WORKSPACE'
       }
     }
     stage('test') {
