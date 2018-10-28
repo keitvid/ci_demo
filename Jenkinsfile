@@ -9,11 +9,7 @@ pipeline {
       }
     }
     stage('Run DAGs') {
-      environment {
-        PATH = '"$PATH:/home/kirill/.local/bin/airflow"'
-      }
       steps {
-        sh 'echo $WORKSPACE'
         sh 'airflow trigger_dag dump_employees'
       }
     }
@@ -32,6 +28,7 @@ pipeline {
     }
   }
   environment {
+    PATH = '$PATH:/home/kirill/.local/bin/airflow'
     LD_LIBRARY_PATH = '/opt/oracle/instantclient_18_3'
   }
 }
