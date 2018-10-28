@@ -4,6 +4,7 @@ pipeline {
     stage('prepare_environment') {
       steps {
         echo 'build start'
+        sh 'export LD_LIBRARY_PATH=/opt/oracle/instantclient_18_3'
         sh 'pip3 install -r ./test_environment/requirements.txt'
         sh 'python3 ./test_environment/create_data_sample.py'
       }
